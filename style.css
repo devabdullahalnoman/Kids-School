@@ -335,13 +335,21 @@
     max-width: 40%;
   }
 
+  .curriculum-card-1,
+  .curriculum-card-2,
+  .curriculum-card-3 {
+    padding: 35px 60px;
+  }
+
   .curriculum-card-title {
     font-size: 1rem;
+    margin: 20px;
   }
 
   .curriculum-card-subtitle {
     font-size: 0.7rem;
     line-height: 1.25rem;
+    padding-bottom: 20px;
   }
 
   .card-btn {

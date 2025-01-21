@@ -143,13 +143,11 @@
 
 /* Mobile Responsive */
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 420px) and (min-width: 300px) {
+  /* Used max-width value of media query 420px instead of 390px for testing on my phone */
+
   .desktop {
     display: none;
-  }
-
-  .navbar,
-  .banner {
   }
 
   /* Navbar */
@@ -190,8 +188,7 @@
   }
 
   .banner-img {
-    min-width: 150px;
-    max-width: 340px;
+    width: 90%;
     margin-bottom: 20px;
   }
 

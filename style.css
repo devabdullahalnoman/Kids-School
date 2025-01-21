@@ -6,16 +6,17 @@
   padding: 0;
 }
 
-/* Shared Style */
-
 :root {
   --white: #ffffff;
   --orange: #fea301;
   --sky-blue: #01acfd;
   --turquoise: #05d4df;
   --purple: #5d58ef;
+  --light-gray: #808080;
   --black: #111111;
 }
+
+/* Fonts */
 
 .quicksand {
   font-family: "Quicksand", serif;
@@ -31,17 +32,26 @@
   font-style: normal;
 }
 
+/* Shared Style */
+
 .flex {
   display: flex;
 }
 
 .btn {
   font-size: 1.25rem;
+  font-weight: 800;
   border: none;
   border-radius: 12px;
   padding: 10px;
   width: 197px;
   height: 50px;
+}
+
+.section-title {
+  font-size: 2.87rem;
+  font-weight: 800;
+  margin: 60px;
 }
 
 /* Navbar */
@@ -57,7 +67,8 @@
   align-items: center;
 }
 
-.navbar {
+.navbar,
+.curriculum-card-container {
   padding: 20px 120px;
 }
 
@@ -141,13 +152,114 @@
   color: var(--white);
 }
 
+/* Standard Curriculum Section */
+
+.curriculum-container,
+.section-title {
+  text-align: center;
+}
+
+.curriculum-container {
+  background-image: url(assets/bg.png);
+  background-repeat: no-repeat;
+}
+
+.curriculum-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.curriculum-card-1,
+.curriculum-card-2,
+.curriculum-card-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 40px;
+  border-radius: 19px;
+}
+
+.curriculum-card-1 {
+  border: 1px solid #def5ff;
+  background: linear-gradient(#def5ff, #ffffff 35%);
+}
+
+.curriculum-card-2 {
+  border: 1px solid #fff4dc;
+  background: linear-gradient(#fff4dc, #ffffff 35%);
+}
+
+.curriculum-card-3 {
+  border: 1px solid #f2e8ff;
+  background: linear-gradient(#f2e8ff, #ffffff 35%);
+}
+
+.curriculum-card-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin: 32px;
+}
+
+.curriculum-card-subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: var(--light-gray);
+  padding-bottom: 34px;
+}
+
+.card-btn {
+  font-size: 1rem;
+  font-weight: 800;
+  border: none;
+  background-color: var(--white);
+}
+
+.curriculum-card-btn-1 {
+  color: #64c8ff;
+}
+
+.curriculum-card-btn-2 {
+  color: #f0aa00;
+}
+
+.curriculum-card-btn-3 {
+  color: #8700ff;
+}
+
+.arrow-btn-container {
+  margin: 60px;
+}
+
+.arrow-btn {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--white);
+  background-color: var(--orange);
+  border: none;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  padding-top: 4px;
+  margin: 0 5px;
+}
+
 /* Mobile Responsive */
 
 @media screen and (max-width: 420px) and (min-width: 300px) {
   /* Used max-width value of media query 420px instead of 390px for testing on my phone */
 
+  /* Shared Style */
+
   .desktop {
     display: none;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    margin-top: 50px;
+    margin-bottom: 10px;
   }
 
   /* Navbar */
@@ -208,7 +320,31 @@
     width: 132px;
     height: 42px;
     font-size: 1rem;
-    font-weight: 800;
     border-radius: 8px;
+  }
+
+  /* Standard Curriculum Section */
+
+  .curriculum-card-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .curriculum-card-img-container > img {
+    max-width: 40%;
+  }
+
+  .curriculum-card-title {
+    font-size: 1rem;
+  }
+
+  .curriculum-card-subtitle {
+    font-size: 0.7rem;
+    line-height: 1.25rem;
+  }
+
+  .card-btn {
+    font-size: 0.7rem;
   }
 }

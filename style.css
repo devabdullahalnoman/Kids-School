@@ -50,6 +50,7 @@
   padding: 10px;
   width: 197px;
   height: 50px;
+  cursor: pointer;
 }
 
 .section-title {
@@ -231,6 +232,7 @@
   font-weight: 800;
   border: none;
   background-color: var(--white);
+  cursor: pointer;
 }
 
 .curriculum-card-btn-1 {
@@ -260,6 +262,7 @@
   width: 60px;
   padding-top: 4px;
   margin: 0 5px;
+  cursor: pointer;
 }
 
 /* Story Section */
@@ -281,6 +284,7 @@
 .story-card {
   background-color: var(--white);
   border-radius: 16px;
+  cursor: pointer;
 }
 
 .large-story {
@@ -362,6 +366,71 @@
 .story-btn-container {
   text-align: center;
   padding: 80px;
+}
+
+/* Footer Section */
+
+footer {
+  background-color: var(--sky-blue);
+  color: var(--white);
+}
+
+.footer-content-container {
+  padding: 135px 120px 150px;
+  grid-template-columns: 1.9fr repeat(2, 1fr);
+}
+
+.footer-head {
+  max-width: 68%;
+}
+
+.footer-name-logo {
+  align-items: center;
+  max-width: 47%;
+  padding-bottom: 36px;
+}
+
+.footer-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  padding-left: 11px;
+}
+
+.footer-info {
+  font-size: 1.25rem;
+}
+
+.foot-nav-title {
+  font-size: 1.5rem;
+  padding-bottom: 32px;
+}
+
+.footer-nav ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.foot-nav-link-list {
+  padding: 10px 0;
+}
+
+.foot-nav-link {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--white);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.foot-contact-title {
+  font-size: 1.6rem;
+  padding-bottom: 30px;
+}
+
+.foot-contact-link {
+  list-style: none;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
 /* Mobile Responsive */
@@ -512,5 +581,32 @@
     max-width: 134px;
     max-height: 30px;
     padding: 7px 10px;
+  }
+
+  /* Footer Section */
+
+  .footer-content-container {
+    grid-template-columns: 1fr;
+    padding: 70px 15px;
+  }
+
+  .footer-head {
+    max-width: 100%;
+  }
+
+  .footer-name-logo {
+    padding-bottom: 22px;
+  }
+
+  .footer-nav {
+    padding: 20px 0;
+  }
+
+  .foot-nav-title {
+    padding: 27px 0;
+  }
+
+  .foot-contact-link {
+    list-style: none;
   }
 }
